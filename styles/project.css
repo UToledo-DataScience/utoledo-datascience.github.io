@@ -48,20 +48,12 @@ main {
     align-items: center;
 }
 
-    .parentprojects .intro .brand {
-        z-index: 9999;
-    }
-
-    .parentprojects .intro p {
-        z-index: 9999;
-    }
-
 .child {
     padding: 0.5rem;
     border-radius: 10px;
     font-size: 2rem;
     text-align: center;
-	z-index: 9999;
+    z-index: 9999;
 }
 
 a {
