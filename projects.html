@@ -4,18 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS-UT</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">   
     <!--Css link-->
     <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/allpages.css">
     <link rel="stylesheet" href="styles/project.css" />
-
-
 </head>    
 <body>
     <div id="header">
@@ -37,11 +29,14 @@
                 <a href="contactUs.html" class="hvr-grow navbarLink">Contact Us</a>
             </li>
         </ul>
-
         <script src="js/navbar.js"></script>
     </div>
-
     <main>
+        <div class="wrapper">
+            <div id="particle_effects" class="project_particles"></div>
+            <script type="text/javascript" src="js/particle_effect/particles.js"></script>
+            <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
+        </div>
         <div class="parentprojects">
             <div class="child">
                 <div class="intro">
@@ -52,13 +47,7 @@
                 </div>
             </div>
         </div>
-
-        <div id="particle_effects" class="project_particles"></div>
-
-        <script type="text/javascript" src="js/particle_effect/particles.js"></script>
-        <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
     </main>
-
     <div id="footer">
         <footer>© Copyright Data Science UToledo.</footer>
     </div>

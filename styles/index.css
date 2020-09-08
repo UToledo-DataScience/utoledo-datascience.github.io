@@ -1,4 +1,4 @@
-* {
+﻿* {
     padding: 0;
     margin: 0;
 }
@@ -23,6 +23,7 @@ body {
     padding: 0.8rem;
     grid-column: 1 / 4;
     color: white;
+    z-index: 9999;
 }
 
 main {
@@ -36,17 +37,24 @@ main {
     text-align: center;
     grid-column: 1 / 4;
     color: white;
+    z-index: 9999;
 }
 
-.parent {
-    display: grid;
-    place-items: center;
-    overflow: auto;
-    position: absolute;
-    width: 100%;
-    transform: scale(0.95);
-    z-index: 10000;
+.parenthome {
+    box-sizing: border-box;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+    .parenthome .intro .brand {
+        z-index: 9999;
+    }
+
+    .parenthome .intro p {
+        z-index: 9999;
+    }
 
 .child {
     padding: 0.5rem;
@@ -60,8 +68,57 @@ a {
     color: white;
 }
 
+.wrapper {
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.index_particles {
+    height: 100%;
+    width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
+    object-fit: cover;
+}
+
 @media only screen and (max-width: 500px) {
     .emailLink {
         font-size: small;
     }
+}
+
+/* 
+    animations
+*/
+
+@keyframes blink {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.blinking {
+    animation: blink 2s infinite;
+}
+
+#quotes, .shortInfo {
+    font-style: italic;
+    font-size: 20px;
 }
