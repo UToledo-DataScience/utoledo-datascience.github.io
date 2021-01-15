@@ -24,7 +24,7 @@ function typewriter(textIndex) {
         target.innerHTML += "<span class='blinking'> |</span>";
     } else {
         target.innerHTML += welcomeText.charAt(textIndex);
-        setTimeout(function() {
+        setTimeout(function () {
             typewriter(textIndex + 1);
         }, speed)
     }
@@ -35,5 +35,8 @@ function generateQuote() {
     target.innerHTML = quotes[Math.floor(Math.random() * 10)]
 }
 
-typewriter(0);
 generateQuote();
+window.setInterval(function () {
+    generateQuote();
+}, 5000);
+typewriter(0);

@@ -1,136 +1,162 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS-UT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DSUT</title>
+    <link rel="title icon" href="assets/images/atom.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/contactUsStyle.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/header_footer/headerFooterLoader.js"></script>
 </head>
+
 <body>
-    <script type="text/javascript">
-        function sendEmail() {
-            var name = document.getElementById("name").value;
-            var number = document.getElementById("rocket-number").value;
-            var mailBody = document.getElementById("myText").value;
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light position-fixed w-100 py-1"
+            style="background-color: rgb(54, 53, 53);" id="topNav">
+            <a class="navbar-brand text-white mr-5 d-flex justify-content-center" href="index.html">
+                <!-- <img src="assets/images/clublogo2.png" width="30px" height="auto" alt=""> -->
+                DSUT
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/images/iconmonstr-menu-1-240.png" width="30px" height="30px" alt="">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link text-white link hvr-grow" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white link hvr-grow" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white link hvr-grow" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white link hvr-grow" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white link hvr-grow" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                    <a href="https://discord.gg/jYDJvMJzQQ" target="_blank">
+                        <button type="button" class="btn btn-light mr-3 my-2 my-sm-0">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                clip-rule="evenodd">
+                                <path
+                                    d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z" />
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://github.com/UToledo-DataScience" target="_blank">
+                        <button type="button" class="btn btn-light my-2 my-sm-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </button></a>
+                </form>
+            </div>
+        </nav>
 
-            if (name == "" || mailBody == "") {
-
-            } else {
-                var mailContent = "My name is " + name + " and my email is " + number + ". Message: " + mailBody;
-                Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "myhomefeedback@gmail.com",
-                    Password: "#Lehoangnhatduy248!!#",
-                    From: "myhomefeedback@gmail.com",
-                    To: "utoledo.datascience@gmail.com",
-                    Subject: "Message From Contact Us Page",
-                    Body: mailContent
-                }).then(
-                );
-
-                document.getElementById("name").value = " ";
-                document.getElementById("rocket-number").value = " ";
-                document.getElementById("myText").value = " ";
-            }
-        }
-
-        $(document).ready(function () {
-            $(".send-btn").click(function () {
-                if (document.getElementById("name").value == "" || document.getElementById("myText").value == "") {
-                    if (window.outerWidth <= 950) {
-                        $(".alert-error").toggleClass("expand2");
-                        $(".alert-error").fadeOut(4500, function () {
-                            $(this).remove();
-                        });
-                    } else {
-                        $(".alert-error").toggleClass("expand1");
-                        $(".alert-error").fadeOut(4500, function () {
-                            $(this).remove();
-                        });
-                    }
-                } else {
-                    if (window.outerWidth <= 950) {
-                        $(".alert-success").toggleClass("expand2");
-                        $(".alert-success").fadeOut(4000, function () {
-                            $(this).remove();
-                        });
-                    } else {
-                        $(".alert-success").toggleClass("expand1");
-                        $(".alert-success").fadeOut(4000, function () {
-                            $(this).remove();
-                        });
-                    }
-                }
-            });
-        });
-    </script>
-    <div id="header">
-        <button type="button" class="navButton">🞬</button>
-        <ul>
-            <li>
-                <a href="index.html" class="hvr-grow navbarLink">Home</a>
-            </li>
-            <li>
-                <a href="projects.html" class="hvr-grow navbarLink">Projects</a>
-            </li>
-            <li>
-                <a href="team.html" class="hvr-grow navbarLink">Our Team</a>
-            </li>
-            <li>
-                <a href="events.html" class="hvr-grow navbarLink">Events</a>
-            </li>
-            <li>
-                <a href="contactUs.html" class="hvr-grow navbarLink">Contact Us</a>
-            </li>
-        </ul>
-        <script src="js/navbar.js"></script>
-    </div>
-    <main>
-        <div class="particle_Wrapper">
-            <div id="particle_effects" class="contact_particles"></div>
-            <script type="text/javascript" src="js/particle_effect/particles.js"></script>
-            <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
-        </div>
-        <div class="wrapper">
-            <!--contact page start-->
-            <div class="contact-section">
-                <div class="notifications">
-                    <!--alert messages start-->
-                    <div id="success" class="alert-success">
-                        <span id="sucess">Message Sent! Thank you for contacting us.</span>
+        <main class="d-flex justify-content-center align-items-center">
+            <div id="overlay">
+                <div id="particle_effects" class="index_particles"></div>
+                <script type="text/javascript" src="js/particle_effect/particles.js"></script>
+                <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
+            </div>
+            <div class="container-fluid text-center mt-5 mt-md-0">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-6 contact-info d-flex align-items-center justify-content-center">
+                        <div>
+                            <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                    </svg></a><br>linkedin.com/in/hoangnhatduyle</p>
+                            <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg></a><br>github.com/NDuy248</p>
+                            <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z" />
+                                    </svg></a><br>utoledo.datascience@gmail.com</p>
+                            <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+                                    </svg>
+                                    </svg></a><br>Lê Hoàng Nhật Duy</p>
+                        </div>
+                    </div> -->
+                    <div class="col-md-6 contact-form mb-3 mb-md-0" style="position: relative; z-index: 1;">
+                        <h4>Contact Us</h4>
+                        <form method="post" id="emailForm">
+                            <input type="text" name="name" class="text-box" placeholder="Your Name" id="name"
+                                required />
+                            <input type="text" name="email" class="text-box" placeholder="Your Email" id="email" />
+                            <textarea name="message" rows="2" placeholder="Your Message" id="myText"
+                                required></textarea>
+                            <div class="container-fluid">
+                                <div class="row justify-content-end">
+                                    <!--alert messages start-->
+                                    <div id="success" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                        <span id="sucess">Message Sent! Thank you for contacting me.</span>
+                                    </div>
+                                    <div id="error" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                        <span>Please fill in all blanks.</span>
+                                    </div>
+                                    <div id="failure" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                        <span>There was an error sending this message. Please send
+                                            us a direct email.</span>
+                                    </div>
+                                    <div class="col-lg-1 col-md-2 col-xs-2"></div>
+                                    <!--alert messages end-->
+                                    <input type="button" class="col-lg-2 col-md-2 col-xs-2 send-btn" value="Send"
+                                        onclick="sendEmail(event)" />
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div id="error" class="alert-error">
-                        <span>One of your inputs cannot be blank! Please try again.</span>
-                    </div>
-                    <!--alert messages end-->
-                </div>
-                <div class="contact-info">
-                    <div><i class="fas fa-map-marker-alt"></i>2801 Bancroft St, Toledo, OH 43606</div>
-                    <div><i class="fas fa-envelope"></i>datasciencetutoledo@gmail.com</div>
-                    <div><i class="fas fa-phone"></i>(567) 694-1943</div>
-                    <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
-                </div>
-                <div class="contact-form">
-                    <h2>Contact Us</h2>
-                    <form class="contact" method="post">
-                        <input type="text" name="name" class="text-box" placeholder="Your Full Name" id="name" required />
-                        <input type="text" name="number" class="text-box" placeholder="Your Email" id="rocket-number" />
-                        <textarea name="message" rows="5" placeholder="Your Message" id="myText" required></textarea>
-                        <input type="button" name="submit" class="send-btn" value="Send" onclick="sendEmail()" />
-                    </form>
                 </div>
             </div>
-            <!--contact page end-->
-        </div>
-    </main>
-    <div id="footer">
-        <footer>© Copyright Data Science UToledo.</footer>
+        </main>
+
+        <footer style="background-color: rgb(54, 53, 53);">
+            © Copyright Data Science UToledo.
+        </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/contact.js"></script>
 </body>
+
 </html>

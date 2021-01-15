@@ -1,12 +1,4 @@
-﻿* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    display: grid;
-    height: 100vh;
-    grid-template: auto 1fr auto / auto 1fr auto;
+﻿body {
     background-color: #F4D03F;
     background: linear-gradient(132deg, #F4D03F 0%, #1642a0 85%) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -16,83 +8,133 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-
-
-#header {
-    background: rgb(54, 53, 53);
-    padding: 0.8rem;
-    grid-column: 1 / 4;
-    color: white;
-    z-index: 9999;
+#topNav {
+    z-index: 2;
 }
 
-main {
-    display: grid;
-    grid-column: 1 / 4;
+#wrapper {
+    color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
 }
 
-#footer {
-    background: rgb(54, 53, 53);
-    padding: 0.2rem;
-    text-align: center;
-    grid-column: 1 / 4;
-    color: white;
-    z-index: 9999;
+
+/*top navbar starts*/
+.link {
+    border-top: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0);
 }
 
-.parenthome {
-    box-sizing: border-box;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.link:hover {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
-    .parenthome .intro .brand {
-        z-index: 9999;
-    }
-
-    .parenthome .intro p {
-        z-index: 9999;
-    }
-
-.child {
-    padding: 0.5rem;
-    border-radius: 10px;
-    font-size: 2rem;
-    text-align: center;
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
+/*top navbar ends*/
 
-.wrapper {
-    opacity: 1;
+#overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 1000;
+    z-index: 1;
 }
 
-.index_particles {
+#particle_effects {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
-    object-fit: cover;
 }
 
-@media only screen and (max-width: 500px) {
-    .emailLink {
-        font-size: small;
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 47.58px;
+    padding-bottom: 40px;
+}
+
+#mainContent {
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#clubLogo {
+    max-height: 300px;
+    max-width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#quotes {
+    font-style: italic;
+    font-size: 20px;
+}
+
+#changeQuotes {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#welcomeText {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#shortIntro {
+    line-height: 1.2;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    main {
+        padding-top: 50.4px;
     }
 }
-
-/* 
-    animations
-*/
+@media (max-width: 400px) {
+    main {
+        height: auto;
+    }
+}
 
 @keyframes blink {
     from {
@@ -116,9 +158,4 @@ a {
 
 .blinking {
     animation: blink 2s infinite;
-}
-
-#quotes, .shortInfo {
-    font-style: italic;
-    font-size: 20px;
 }
