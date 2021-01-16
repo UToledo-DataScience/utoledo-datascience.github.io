@@ -51,7 +51,7 @@ h1 {
     position: relative;
     width: 45%;
     padding: 10px 30px;
-    border-radius: 4px;
+    border-radius: 30px;
     background: #f5f5f5;
     box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
   }
@@ -208,16 +208,15 @@ main a {
 }
 
 .memberPhoto {
-      width: 85%;
+      width: 180px;
       border-radius: 50%;
-      height: auto;
-      max-width: 200px;
+      height: 180px;
 }
 
 .card-common {
   width: 80%;
   background-color: #f5f5f5; 
-  border-radius: 7%;
+  border-radius: 30px;
 }
 
 .overlayCard {
